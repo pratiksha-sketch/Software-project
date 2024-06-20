@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITdesk_Caddesk</title>
+    <link rel="stylesheet" href="pratikshaprojITdesk.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="navbar">
+            <div id="logo" class="details">
+                <a href=""><img id="img1" src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/logo-1-e1592914952499.png" alt="" height="45px"></a>
+            </div>
+            <div class="location" class="details">
+                <a href="">
+                    <img id="img2"  src="../project/amazon1/locationlogo.png" alt="">
+                    <p id="para2">Bommanhalli<br>Update location</p>                    
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://img1.wsimg.com/isteam/ip/984ff516-f122-4faa-8463-3340cd4e46dd/Engg%205%20IT.png/:/rs=w:1280,h:720" class="d-block w-100" alt="..." height="700px" width="100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img1.wsimg.com/isteam/ip/984ff516-f122-4faa-8463-3340cd4e46dd/811602.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:800" class="d-block w-100" alt="..." height="700px" width="100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img1.wsimg.com/isteam/ip/984ff516-f122-4faa-8463-3340cd4e46dd/Engg5a.jpg/:/rs=w:1280,h:960" class="d-block w-100" alt="..." height="700px" width="100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img1.wsimg.com/isteam/ip/984ff516-f122-4faa-8463-3340cd4e46dd/3x8-2.jpg/:/rs=w:1160,h:725" class="d-block w-100" alt="..." height="700px" width="100%">
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+        </div>
+        <form id="pdfform">
+            <img id="img11" src="../javascript/caddesklogo-1024x267-min.png" alt=""><br><br>
+            <h2>CAD/IT DESK REGISTRATION FORM</h2><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required><br><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="number" id="mobile" placeholder="Enter your number"required><br><br>
+            <label for="date">Date of Joining:</label>
+            <input type="date" id="date" placeholder="Enter your joining date"required><br><br>
+            <label for="course">Course Name:</label>
+            <input type="text" id="course" placeholder="Enter your course name"required><br><br>
+            <label for="place">Place Name:</label>
+            <input type="text" id="place" placeholder="Enter your place"required><br><br>
+            <button id="submit">APPLY</button>
+        </form>
+        <script>
+             document.getElementById('pdfform').addEventListener('submit', function(event) { 
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var faculty = document.getElementById('faculty').value;
+        var mobile = document.getElementById('mobile').value;
+        var date = document.getElementById('date').value;
+        var course = document.getElementById('course').value;
+        var place = document.getElementById('place').value;
+        var feedback = document.getElementById('feedback').value;
+        
+        const doc = new jsPDF(); 
+        doc.text(`name: ${name}`, 10, 20);
+        doc.text(`faculty: ${faculty}`, 10, 30);
+        doc.text(`mobile: ${mobile}`, 10, 40); 
+        doc.text(`date: ${date}`, 10, 50);
+        doc.text(`course: ${course}`, 10, 60);
+        doc.text(`place: ${place}`, 10, 70);
+        doc.text(`feedback: ${feedback}`, 10, 80);
+        
+        let response = confirm("Do you want to Apply ?");
+        if (response)
+            { 
+                doc.save(`${name}`+'.pdf'); 
+                } else {
+                     alert(" Cancel succefully "); 
+                    } 
+                    name= document.getElementById('name').value=''
+                    faculty = document.getElementById('faculty').value=''
+                    mobile = document.getElementById('mobile').value=''
+                    date= document.getElementById('date').value=''
+                    course = document.getElementById('course').value=''
+                    place = document.getElementById('place').value=''});
+
+        </script>   
+    </div>
+    <hr>
+    <div>
+        <h1>CS/IT COURSES</h1>
+    </div>
+    <div class="mech">
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/webdesign-2-150x150.png" alt="">
+            <h4>Web Design</h4>
+            <p>Web Design is basically used to design and develop static websites that are displayed on the Web Browser.
+                It covers the appearance, layout, and content of the website. It also includes the complete part of CSS and 
+                JavaScript. Web Designing makes the visuals compelling for the user. CAD DESK's online software training course
+                provides an insight into the most used aspects of Web Design including the use of CSS, JavaScript, JQuery & 
+                various HTML tags.</p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/c-5-150x150.png" alt="">
+            <h4>C++ Programming</h4>
+            <p>C++ was developed by Bjarne Stroustrup as an extension to C, with a vision of providing high-level features and
+                increasing the efficiency of program organization. C++ is an (OOP) Object-Oriented Programming language which is
+                the world's most popular programming language used for developing applications, and operating systems, etc. CAD 
+                DESK being the leading brand in India provides the best quality online training course which gives a comprehensive
+                overview of the C++ language along with the usage of OOPS concepts, classes, and objects, etc</p>
+        </div>
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2023/03/mysql_PNG35-150x150.png" alt="">
+            <h4>Microsoft SQL Server</h4>
+            <p>Microsoft SQL Server is a relational database management system, or RDBMS, that supports a wide variety of transaction
+                processing, business intelligence and analytics applications in corporate IT environments. While developing software 
+                applications, programmers use relational database management system (RDBMS) to create, read, update and delete
+                back-end data</p>
+        </div> 
+    </div>
+    <div class="mech2">
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/08/MC-learning-min-scaled-1-e1598696703288.jpg" alt="">
+            <h4>Machine Learning</h4>
+            <p>The DSA course typically refers to the Data Structures and Algorithms course, which is a fundamental component of 
+                computer science and programming education. It focuses on teaching students about various data structures and 
+                algorithms and their applications in solving computational problems efficiently.
+               </p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/08/Data-science-with-python-min-scaled-1-e1598695879561.jpg" alt="">
+            <h4>Data Science with Python</h4>
+            <p>A python is an open-source software that provides great functionality to deal with mathematics, scientific functions. 
+               It has an easy to understand interface which makes it widely adapted by multiple industries. Python provides a large 
+               collection of libraries and packages to deal with data science applications. CAD DESK has the best online training 
+               course which provides in-depth knowledge of the Python libraries and packages that are required to perform data 
+               analysis, data visualization, web scraping, etc.
+               </p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/java-2.png" alt="">
+            <h4>Core Java</h4>
+            <p>Java is an object-oriented programming language that is generally designed either to be compiled to native (machine) 
+                code or to be interpreted from source code at runtime. Java is intended to be compiled to a bytecode, which is then 
+                run (generally using JIT compilation) by a Java Virtual Machine. CAD DESK has the best online training course which is
+                designed in such a way that it provides a proper understanding of Java Programming along with different features like 
+                file handling, string handling, and threading, etc.
+                </p>
+        </div>    
+    </div>
+    <hr>
+    <h1>MECHANICAL COURSES</h1>
+    <div class="mech">
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/08/acadme.jpg" alt="">
+            <h4>AutoCad for Mechanical</h4>
+            <p>AutoCAD is a powerful designing and drafting software used to create precise
+                2D drawings and 3D models. AutoCAD Mechanical online training course is highly recommended for mechanical engineers
+                who are looking for opportunities or are already working on mechanical designs and manufacturing of machinery parts.
+                CAD DESK provides the best online training for AutoCAD Mechanical; which is structured in such a way that it will meet the 
+                Industrial objective domains and follow the typical workflow.
+            </p>
+        </div>
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/sw-3-150x150.png" alt="">
+            <h4>SolidWorks</h4>
+            <p>SOLIDWORKS is one of the most significant and powerful 3D CAD programs. It is the world’s leading product design 
+                software that enables us to deliver innovative solutions to the engineering or technical industries. CAD DESK offers 
+                the best online training course through which each learner gets step-by-step learning of essential and advanced tools and techniques.
+                Being a 2D and 3D parametric modeler, SOLIDWORKS is essential to most engineering and drafting systems. CAD DESK 
+                encourages the students to do an Internship during the course and work on various projects. CAD DESK provides quality 
+                training on the latest version of SOLIDWORKS.   
+            </p>
+        </div>
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/cnc-4-150x111.png" alt="">
+            <h4>CNc Programming</h4>
+            <p>CNC programming (Computer Numerical Control Programming) is beneficial for creating computer program instructions to 
+                control machine tools. CNC is vastly used in the manufacturing process and promotes good mechanisms as well as
+                 flexibility. In India, CAD DESK offers the best online training courses for various software including CNC; which                 
+                 is designed in such a way that it will cover the fundamentals of CNC programming, G-code and M-code, offset 
+                 settings, and many more.
+            </p>
+        </div>
+    </div>    
+    <div class="mech2">
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2024/04/blender-logo-render-150x150.png" alt="">
+            <h4>Product Design And <br>Animation with Blender</h4>
+            <p>Blender is a powerful and versatile 3D creation software used by artists, designers & animators around the globe.
+                Whether you're a beginner exploring the basics of 3D modeling or an experienced professional pushing the boundaries 
+                of visual effects.
+                Our course covers all essential Blender topics, from introduction to advanced techniques, including modeling, 
+                modifiers, materials, texturing, animation & rendering. With hands-on exercises & practice sessions throughout,
+                you'll gain practical experience at every step. Emphasizing product animation with Blender, you'll learn how to
+                bring your designs to life & create compelling visuals that captivate audiences.</p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/catia-6-150x111.png" alt="">
+            <h4>CATIA</h4>
+            <p>CATIA or Computer-Aided Three-dimensional Interactive Application is one of the most prominent CAD software developed 
+            and designed by Dassault Systemes. CATIA is used by various industries like automotive, aerospace, auto-manufacturing
+            companies, and also in architectural and construction projects for designing, analyzing, and engineering insights. 
+            For CATIA, CAD DESK has structured the best online training course that helps the students to get in-depth knowledge 
+            of mechanical component design and could uplift their career.</p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2021/01/CATIA-150x150.png" alt="">
+            <h4>CITIA Video Training</h4>
+            <p>CATIA or Computer-Aided Three-dimensional Interactive Application is one of the most prominent CAD software 
+               developed and designed by Dassault Systemes. CATIA is used by various industries like automotive, aerospace, 
+               auto-manufacturing companies, and also in architectural and construction projects for designing, analyzing, and 
+               engineering insights.
+               CAD DESK online video training course helps the students to get in-depth knowledge of mechanical component design 
+               and could uplift their career. This course covered almost all tools related to product design, the course starts with 
+               the introduction and GUI of CATIA, further it covers sketch Module, part design, assembly, surfacing, sheet metal 
+               design, DMU Kinematics, and drawing modules.</p>
+        </div>    
+    </div>            
+    <hr>
+    <div>
+        <h1>ELECTRICAL COURSES</h1>
+    </div>
+    <div class="mech">
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/mep-5-150x150.png" alt="">
+            <h4>Revit MEP</h4>
+            <p>Autodesk Revit MEP is the industry-standard tool designed for building information modeling or BIM. MEP expands as
+                Mechanical, Electrical, and Plumbing, which are the major components of the BIM chain. CAD DESK is the leading CADD
+                courses centers in India and the online training course is structured in such a way that it provides an in-depth 
+                knowledge of essential and advanced tools of Revit MEP</p>
+        </div> 
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/acad-ele-4-150x150.png" alt="">
+            <h4>AutoCad Electrical</h4>
+            <p>AutoCAD Electrical is one of the most powerful programs developed by Autodesk. It has a complete toolset available
+                which includes a number of drafting commands like wiring, circuiting, PLC modules, panels, and many more. CAD DESK 
+                online training course is designed in such a way that it will provide in-depth knowledge of drafting, drawing 
+                technology; customization of symbols, PLC symbols in ladder diagrams, adding annotations, etc</p>
+        </div>
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/08/Eplan-Electric-150x150.png" alt="">
+            <h4>EPLAN Electric</h4>
+            <p>EPLAN Electric P8 is an electrical engineering design software program that offers unlimited possibilities for project 
+                planning, documentation, and management. CAD DESK is the leading brand in India for CAD, CAM, and CAE training and 
+                they always put great emphasis on delivering the best quality training to its students. With this online software 
+                training course, students get to understand the automatic production of detailed reports based on wiring diagrams 
+                and also provide subsequent phases of the project, such as production, assembly, commissioning, and service with 
+                the data required.</p>
+        </div>   
+    </div>
+    <div class="mech2">
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2024/05/Eplan-Electric-150x150.jpeg" alt="">
+            <h4>EPLAN Electric P8 Video Training</h4>
+            <p>EPLAN Electric P8 is an electrical engineering design software program that offers unlimited possibilities for project 
+                planning, documentation, and management.
+                With this online self paced video training course, students get to understand the automatic production of detailed 
+                reports based on wiring diagrams and also provide subsequent phases of the project, such as production, assembly, 
+                commissioning, and service with the data required.
+                EPLAN offers an integrated engineering solution, which saves both time and cost and helps in avoiding errors, and 
+                increases productivity over the long term</p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2024/03/CATIA-Electrical-150x150.jpg" alt="">
+            <h4>CATIA Electrical</h4>
+            <p>CATIA (Computer-Aided Three-Dimensional Interactive Application) is a powerful software suite developed by Dassault 
+                Systèmes, designed to facilitate product design and engineering in various industries.
+                he CATIA Electrical course provides comprehensive training on how to use CATIA's electrical design capabilities 
+                effectively. Whether you're a novice or an experienced user, this course will guide you through the essential features 
+                and functionalities of CATIA Electrical, enabling you to create, analyze, and optimize electrical systems efficiently</p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/12/Etap-150x150.png" alt="">
+            <h4>ETAP</h4>
+            <p>ETAP is a unique software that performs simulations, analysis, and design of power systems. It has very vast 
+               capabilities such as Load flow analysis, Arc flash, Protection coordination studies, cable pulling, etc. CAD DESK's 
+               online training course also covers all the fundamentals of conducting analysis in power systems, thus it makes it very 
+               easy and for beginners to follow the course.
+               CAD DESK is the leading brand in India in CAD and CAM training and they always put great focus on delivering the 
+               best quality training to its students. Further, they promote Internships to its students and provides them projects 
+               also during the software online classes. Every software training is conducted on the latest version of ETAP.</p>
+        </div>    
+    </div>
+    <hr>
+    <div>
+        <h1>CIVIL/ARCHITECTURE COURSES</h1>
+    </div>
+    <div class="mech">
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/08/acad-civil.jpg" alt="">
+            <h4>AutoCad for Civil</h4>
+            <p>AutoCAD developed by Autodesk is a powerful designing and drafting software used to create precise 2D drawings and 
+               3D models. AutoCAD Civil online training is highly suggested for the students who are looking for opportunities or
+               involved in building planning and designs. CAD DESK is one of the leading CAD/CAM training centers in India. CAD DESK 
+               offers the best online courses in the field of CADD courses including AutoCAD Civil; which is designed in such a way 
+               that it will meet the Industrial objective domains and follow the typical workflow.</p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2021/07/Int-with-Vastu-150x150.jpg" alt="">
+            <h4>Interior Designing And Space <br>Planning with Vaastu Shastra</h4>
+            <p>Vastu principles aim to establish harmony by using the five basic elements – earth, water, fire, air, and space. It is 
+                believed that if the furniture, accessories, and interiors are arranged according to Vastu Shastra, then, it will 
+                usher prosperity, health, and welfare into the household. In this Interior design online training course participants 
+                will learn all the principles of Vastu Shastra with the interior design concepts.</p>
+        </div>
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/revit-arch-3-150x148.png" alt="">
+            <h4>Revit ARCHITECTURE</h4>
+            <p>Autodesk Revit is the industry-standard tool designed for building information modeling or BIM. Revit Architecture 
+                online training helps in enhancing the efficiency and accuracy across the project lifecycle, from concept to 
+                construction and later maintenance. As the model develops, Revit automatically updates the floor plans, elevations, 
+                and sections. With CAD DESK, students get an opportunity to learn from the best online courses like Revit
+                Architecture; which is designed in such a way that it will provide in-depth learning of software with a flexible 
+                solution to develop products.</p>
+        </div> 
+    </div>
+    <div class="mech2">
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/staad-5-150x148.png" alt="">
+            <h4>STAAD Pro</h4>
+            <p>STAAD.Pro stands for Structural Analysis and Design Program originally developed by Research Engineers International, 
+                which was later bought by Bentley. STAAD.Pro training is widely recommended in Structural Analysis and Design Software
+                 which simplifies the BIM workflow by automatically converting a physical model into an analytical model. CAD DESK 
+                 is one of India’s top brands in CAD/CAM training centers. STAAD.Pro Online Course Training is structured in such a 
+                 way that it provides the essential knowledge required for the structural analysis and design of a building.</p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/revit-structure-1-150x148.png" alt="">
+            <h4>Revit Structure</h4>
+            <p>Revit Structure is a powerful platform or software in structural engineering, provides great exploration for 
+                cutting-edge tools and for creating design alternatives, building simulations, and publishing. CAD DESK provides 
+                the best quality online training course that is designed on a structural template of Revit, which clears a lot many 
+                concepts of the software.
+                Revit structure Training includes BIM software for structural engineering which enhances structural design 
+                coordination, minimizes errors. CAD DESK online classes provide the students to do Internships and provide assistance 
+                to work on projects.</p>
+        </div>   
+        <div class="mec">
+            <img src="https://caddeskindia.com/online-training/wp-content/uploads/2020/06/MAX-3-150x150.png" alt="">
+            <h4>3DS Max</h4>
+            <p>Autodesk 3DS Max is the most powerful software among modeling and rendering tools. It especially shows its strength 
+                in architecture, manufacturing, industrial design, and many more like visual graphics models. There are a lot of 
+                features and tools available in this software, which are associated with modeling and texturing to lighting and 
+                rendering. CAD DESK online training course provides the best online coaching or trainings which will help you in
+                understanding the best of designing techniques for different objects using splines, polygons, and subdivision surfaces.</p>
+        </div>    
+    </div>
+    <div class="last">
+        <div class="lastsub">
+            <div id="last2">
+                <ul type="disk">
+                    <li type="none" style="font-weight: bold;">Contact Us</li>
+                    <a href=""><li>Phone:1234567890</li></a>
+                    <a href=""><li>Email:pratiksha5678@gmail.com</li></a>
+                    <a href=""><li>CADDESK, No. 23/2, 2nd Floor, Begur Main Road, Bommanhalli, Bangalore - 560068.</li></a><br>
+                </ul>
+            </div>
+            <div id="last1">
+                <ul type="disk">
+                    <li type="none"  style="font-weight: bold;">AbeBooks</li>
+                    <a href=""><li>Books, art <br>& collectibles</li></a><br>
+                </ul>
+            </div>
+            <div id="last1">
+                <ul type="disk"> 
+                    <li type="none"  style="font-weight: bold;">Audible</li>
+                    <a href=""><li>Download<br>Audio Books</li><br></a>
+                </ul>
+            </div> 
+        </div>      
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</html>

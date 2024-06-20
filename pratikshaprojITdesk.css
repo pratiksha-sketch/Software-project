@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(79, 221, 44);
+    position: fixed;
+    top: 0;
+}
+.details{
+    height: 100%;
+    display: flex;
+}
+.location #para2{
+    left: -55%;
+    margin-top: 10px;
+}
+#img1{
+    margin-top: -15px;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+#img2{
+    height: 30px;
+    margin-left: -100px;
+    margin-top: 15px;   
+}
+#para2{
+    position: relative; 
+    left: -1210px;
+    bottom: 44px;
+}
+h1{
+    text-align: center;
+    top: 100px;
+    color: green;
+    font-weight: bolder;
+}
+.mec{
+    height:460px;
+    width: 500px;
+    margin-left: 20px;
+}
+.mech{
+    margin-top: 2%;
+    background-color: rgb(185, 255, 199);
+    display: flex;
+    margin-left: 0%;
+    margin-right: 0%;
+    justify-content: space-between;
+}
+.mech2{
+    margin-top: 2%;
+    background-color: rgb(185, 255, 199);
+    display: flex;
+    margin-left: 0%;
+    margin-right: 0%;
+    justify-content: space-between;
+}
+form{
+    border: 1px black solid;
+    background-color: rgb(202, 238, 210);    
+    text-align: center;
+    font-size: large;
+    height: 550px;
+    width: 30%;
+    margin-left: 67%;
+    margin-top: -38%; 
+    border-radius: 5px;
+    position: absolute;  
+}
+h2{
+    color: green;
+    font-size: x-large;  
+}
+button{
+    color:green;
+    font-size: larger;
+    background-color: azure;
+    font-weight: bolder;
+    width: 100px;
+    border: 4px black solid;
+     
+}    
+input,label{
+    font-size: large;
+} 
+#img11{
+    height: 60px;
+    width: 200px;
+    margin-top: 2%;
+}      
+.last{
+    background-color: rgb(79, 221, 44);
+    height: 250px;
+}
+.lastsub{
+    display: flex;
+    justify-content: space-around;
+}
+.lastsub a{
+    color: black;
+    text-decoration: none;
+    margin-bottom: -100px;
+}
+.lastsub ul{
+    margin-top: 70px;
+    font-size: larger;
+    
+}
